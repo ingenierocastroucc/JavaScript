@@ -123,6 +123,78 @@ console.log('Proyeccion de pagos del estudiante:' + ' ' + pagoProyectadoEstudian
 //Raiz cuadrada
 const pagoEquivalenteEstudiante = Math.sqrt((((400000 + 250000) * 0.19) % 0.8) ** 2)
 console.log('Pago equivalente del estudiante:' + ' ' + pagoEquivalenteEstudiante.toFixed(2))
+/*##OPERADORES ARITMETICOS************************************************************************************************************/
+/*##OPERADORES DE COMPARACION*********************************************************************************************************/
+/*##OPERADORES LOGICOS****************************************************************************************************************/
+const valorMatriculaTotal = 4000000
+const valorAsignatrurasTotal = 3600000
+const valorRestanteTotal = 400000
 
+//Igual
+const operadorIgual = valorMatriculaTotal == valorAsignatrurasTotal
+console.log('Operador igual:' + ' ' + operadorIgual)
+//Mayor
+const operadorMayor = valorMatriculaTotal > valorAsignatrurasTotal
+console.log('Operador mayor:' + ' ' + operadorMayor)
+//Menor
+const operadorMenor = valorMatriculaTotal < valorAsignatrurasTotal
+console.log('Operador menor:' + ' ' + operadorMenor)
+//Mayor igual
+const operadorMayorIgual = valorMatriculaTotal >= valorAsignatrurasTotal
+console.log('Operador mayor o igual:' + ' ' + operadorMayorIgual)
+//Menor Igual
+const operadorMenorIgual = valorMatriculaTotal <= valorAsignatrurasTotal
+console.log('Operador menor o igual:' + ' ' + operadorMenorIgual)
+//Diferente
+const operadorDiferente = valorMatriculaTotal != valorAsignatrurasTotal
+console.log('Operador diferente:' + ' ' + operadorDiferente)
+/*##OPERADORES LOGICOS****************************************************************************************************************/
+/*##CONDICIONALES*********************************************************************************************************************/
+//if
+if (valorPagarEstudiante != null || valorPagarEstudiante != '')
+{
+    console.log('Tiene una deuda pendiente con la institucion, por un valor de:' + ' ' + valorPagarEstudiante)
+}
+else if (valorPagarEstudiante < 200000)
+{
+    console.log('Su deuda es financiable con la institucion')
+}
+else
+{
+    console.log('No tiene una deuda pendiente con la institucion')
+}
 
+//Generacion de horario aleatorio
+const horarioAleatorio = Math.floor(Math.random() * 12 + 1);
 
+const horarioEstudiante = parseInt(prompt ("Ingresa el horario a matricular del 1 al 12:"));
+
+console.log('El horario que escogiste es:' + ' ' +horarioEstudiante);
+
+if (horarioAleatorio == horarioEstudiante)
+{
+    console.log('Horario seleccionado disponible para matricular.');
+}
+else if (horarioAleatorio != horarioEstudiante)
+{
+    console.log('El horario seleccionado no se encuentra disponible para matricular.');
+}
+else if (horarioEstudiante > 12)
+{
+    console.log('El horario seleccionado supera la intensidad horaria disponible para la asignatura');
+}
+
+//Switch
+switch(horarioEstudiante)
+{
+    case 4:
+        console.log('La asignatura estara a cargo del docente Pedro Diaz');
+        break;
+    case 6:
+        console.log('La asignatura estara a cargo del docente Juan Sanabria');    
+        break;
+    default:
+        console.log('El docente para la asignatura con horario:' + ' ' + horarioEstudiante + 'sera asignado con posteriroridad');
+}
+/*##CONDICIONALES*********************************************************************************************************************/
+/*##OPERADORES DE COMPARACION*********************************************************************************************************/
