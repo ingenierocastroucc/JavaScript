@@ -196,5 +196,51 @@ switch(horarioEstudiante)
     default:
         console.log('El docente para la asignatura con horario:' + ' ' + horarioEstudiante + 'sera asignado con posteriroridad');
 }
+//for
+let listaAsignaturas = ["Calculo","SQL","C#"]
+
+for (let i = 0; i <listaAsignaturas.length ; i++)
+{
+    console.log('Este es el lsitado de asignaturas:' + listaAsignaturas[i]);
+
+}
+
+//for of arrays-strings
+let listaEstudiantes = ["Alfonso Doria","Andres Machado","Daniel Ruiz"]
+
+for (estudiante of listaEstudiantes)
+{
+    console.log('Este es el lsitado de estduaintes matriculados:' + listaEstudiantes);
+}
+
+//for in arrays-strings
+const listaMatriculas = {  IdMatricula: 1,
+                           Estudiante: 'Fabian Diaz',
+                           Estado : 'Activo'
+                        }
+
+for (matriculas in listaMatriculas)
+{
+    console.log(listaMatriculas);
+}
+
+//While
+let contadorHoras = 0;
+
+while (contadorHoras < 12)
+{
+      console.log(contadorHoras);
+      contadorHoras++;
+}
+
+//DoWhile
+let contadorIngresosPlataforma = 0;
+
+do
+{
+    console.log(contadorIngresosPlataforma);
+    contadorIngresosPlataforma++;
+}
+while (contadorIngresosPlataforma < 12)
 /*##CONDICIONALES*********************************************************************************************************************/
 /*##OPERADORES DE COMPARACION*********************************************************************************************************/
